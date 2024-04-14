@@ -1,16 +1,26 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "app.js",
-        "use": "@now/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "app.js",
-        "methods": ["GET", "POST", "PUT", "PATCH", "DELETE",  "OPTIONS"]
-      }
-    ]
-  }
+  "version": 2,
+  "builds": [{ "src": "app.js", "use": "@vercel/node" }],
+  "routes": [
+    {
+      "src": "/api/auth/login",
+      "dest": "/app.js"
+    },
+    {
+      "src": "/api/auth/register",
+      "dest": "/app.js"
+    },
+    {
+      "src": "/api/diary",
+      "dest": "/app.js"
+    },
+    {
+      "src": "/api/diary/:id",
+      "dest": "/app.js"
+    },
+    {
+      "src": ".*",
+      "dest": "/app.js"
+    }
+  ]
+}
