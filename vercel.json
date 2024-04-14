@@ -1,25 +1,14 @@
 {
   "version": 2,
-  "builds": [{ "src": "app.js", "use": "@vercel/node" }],
+  "builds": [
+    {
+      "src": "app.js",
+      "use": "@vercel/node"
+    }
+  ],
   "routes": [
     {
-      "src": "/api/auth/login",
-      "dest": "./controllers/authController.js"
-    },
-    {
-      "src": "/api/auth/register",
-      "dest": "./controllers/authController.js"
-    },
-    {
-      "src": "/api/diary",
-      "dest": "./controllers/diaryController.js"
-    },
-    {
-      "src": "/api/diary/:id",
-      "dest": "./controllers/diaryController.js"
-    },
-    {
-      "src": ".*",
+      "src": "/api/(.*)",
       "dest": "app.js"
     }
   ]
