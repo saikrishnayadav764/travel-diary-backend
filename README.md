@@ -159,10 +159,6 @@ User authentication is implemented using JSON Web Tokens (JWT). Upon successful 
 - **location**: String
 - **photos**: Array of Strings (URLs)
 
-## Testing
-
-Comprehensive testing is performed to ensure the functionality and security of the API endpoints. Unit tests cover authentication, CRUD operations, and error handling.
-
 ## Technologies Used
 
 - Node.js
