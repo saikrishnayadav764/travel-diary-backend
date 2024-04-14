@@ -73,4 +73,19 @@ async function login(req, res) {
   }
 }
 
-module.exports = { register, login };
+async function userProfile(req, res) {
+  try {
+    // Fetch user profile from database
+    const user = await User.findById(req.user.id).select("-password");
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    res.json(user);
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send("Server Error");
+  }
+}
+
+module.exports = { register, login, userProfile };
