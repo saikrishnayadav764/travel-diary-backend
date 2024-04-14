@@ -72,20 +72,92 @@ The server starts at http://localhost:3000 by default. Once the server is runnin
 ### User Authentication
 
 - **POST /api/auth/register**: Register a new user
+
+  Example:
+  ```json
+  {
+    "username": "ram",
+    "email": "ram@gmail.com",
+    "password": "ram"
+  }
+  ```
+
 - **POST /api/auth/login**: Login an existing user
+
+  Example:
+  ```json
+  {
+    "email": "john@gmail.com",
+    "password": "john"
+  }
+  ```
+
 - **GET /api/auth/profile**: Get user profile (requires authentication)
+
+  Example Response:
+  ```json
+  {
+    "_id": "661bcdb312bcbf32cb9791da",
+    "username": "john",
+    "email": "john@gmail.com",
+    "__v": 0
+  }
+  ```
 
 ### Diary Entries
 
 - **POST /api/diary**: Create a new diary entry (requires authentication)
+
+  Example:
+  ```json
+  {
+    "title": "Trip to Paris",
+    "description": "Visited Eiffel Tower and Louvre Museum.",
+    "date": "2023-07-15",
+    "location": "Paris, France",
+    "photos": ["https://example.com/photo1.jpg", "https://example.com/photo2.jpg"]
+  }
+  ```
+
 - **GET /api/diary**: Get all diary entries (requires authentication)
+
 - **GET /api/diary/:id**: Get a specific diary entry by ID (requires authentication)
+
 - **PUT /api/diary/:id**: Update a diary entry by ID (requires authentication)
+
+  Example:
+  ```json
+  {
+    "title": "Updated Title",
+    "description": "Updated description of the trip.",
+    "location": "Paris, France"
+  }
+  ```
+
 - **DELETE /api/diary/:id**: Delete a diary entry by ID (requires authentication)
 
 ## Authentication
 
 User authentication is implemented using JSON Web Tokens (JWT). Upon successful login, a JWT token is generated and used for subsequent authenticated requests.
+
+## User Data Structure
+
+### User
+
+- **_id**: ObjectId (automatically generated)
+- **username**: String (required, unique)
+- **password**: String (required, hashed)
+
+## Diary Entry Data Structure
+
+### DiaryEntry
+
+- **_id**: ObjectId (automatically generated)
+- **title**: String (required)
+- **description**: String
+- **date**: Date (required)
+- **location**: String
+- **photos**: Array of Strings (URLs)
 
 ## Testing
 
@@ -101,5 +173,4 @@ Comprehensive testing is performed to ensure the functionality and security of t
 
 ## Deployed API Link
 
-[https://travel-diary-backend-ivory.vercel.app]
-
+[https://lazy-blue-abalone-slip.cyclic.app]
