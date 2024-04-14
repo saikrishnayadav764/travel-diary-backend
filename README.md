@@ -1,6 +1,3 @@
-Here's the revised documentation for the Travel Diary Platform Application:
-
----
 
 # Travel Diary Platform Application
 
@@ -60,8 +57,8 @@ Travel_Diary_Platform/
 
 To set up the application locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/yourusername/Travel_Diary_Platform.git`
-2. Change directory: `cd Travel_Diary_Platform`
+1. Clone the repository: `https://github.com/saikrishnayadav764/travel-diary-backend.git`
+2. Change directory: `cd travel_diary_platform`
 3. Install dependencies: `npm install`
 4. Configure database connection in `config/db.js`
 5. Start the server: `node app.js`
