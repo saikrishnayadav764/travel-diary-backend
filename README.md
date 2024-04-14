@@ -101,5 +101,5 @@ Comprehensive testing is performed to ensure the functionality and security of t
 
 ## Deployed API Link
 
-[Insert deployed API link here]
+[https://travel-diary-backend-ivory.vercel.app]
 
