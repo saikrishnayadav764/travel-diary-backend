@@ -23,7 +23,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/diary", diaryRoutes);
 
 // Error handling middleware
-app.use(errorHandler);
+// app.use(errorHandler);
 
 // Starting the server
 const PORT = process.env.PORT || 3000;
