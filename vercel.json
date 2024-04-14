@@ -4,23 +4,23 @@
   "routes": [
     {
       "src": "/api/auth/login",
-      "dest": "/app.js"
+      "dest": "./controllers/authController.js"
     },
     {
       "src": "/api/auth/register",
-      "dest": "/app.js"
+      "dest": "./controllers/authController.js"
     },
     {
       "src": "/api/diary",
-      "dest": "/app.js"
+      "dest": "./controllers/diaryController.js"
     },
     {
       "src": "/api/diary/:id",
-      "dest": "/app.js"
+      "dest": "./controllers/diaryController.js"
     },
     {
       "src": ".*",
-      "dest": "/app.js"
+      "dest": "app.js"
     }
   ]
 }
