@@ -63,6 +63,20 @@ To set up the application locally, follow these steps:
 4. Configure database connection in `config/db.js`
 5. Start the server: `node app.js`
 
+### Sending Authorization Token
+
+For authenticated endpoints, the Authorization token should be included in the HTTP headers of the request. It must be sent as a Bearer token.
+
+#### Example:
+
+```http
+GET /api/diary HTTP/1.1
+Host: localhost:3000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJpYXQiOjE2MTk1NDY2MzZ9.YwEBGhBkOFDMqFecUvRLH7EQvWjG7ty7U8nozBE-ucQ
+```
+
+In the above example, replace the token value (`eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJpYXQiOjE2MTk1NDY2MzZ9.YwEBGhBkOFDMqFecUvRLH7EQvWjG7ty7U8nozBE-ucQ`) with the actual JWT token obtained after successful login.
+
 ## Usage
 
 The server starts at http://localhost:3000 by default. Once the server is running, you can access the defined API endpoints.
